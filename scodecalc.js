@@ -106,8 +106,8 @@ function sCode() {
     }
 
     var combGrades = oldGrades.concat(currGrades);
-    var m = calcMean(combGrades);
-    var med = calcMedian(combGrades);
+    var m = Math.round(calcMean(combGrades) * 10) / 10;
+    var med = Math.round(calcMedian(combGrades) * 10) / 10;
 
     resString += " resulting in a mean of " + m + " and a median of " + med;
     results.push(resString);
