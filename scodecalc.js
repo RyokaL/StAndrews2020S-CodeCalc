@@ -163,6 +163,9 @@ function calcMedian(grades) {
     for(var i = 0; i < grades.length; i++) {
       count += grades[i].credits;
       if(mid - 0.5 == count && mid + 0.5 > count) {
+        return (grades[i + 1].grade + grades[i].grade) / 2;
+      }
+      if(count > mid) {
         return grades[i].grade;
       }
     }
