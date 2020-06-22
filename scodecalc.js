@@ -144,6 +144,9 @@ function calcMean(grades) {
 }
 
 function calcMedian(grades) {
+  grades.sort(function(x,y) {
+    return x.grade - y.grade;
+  });
   var totCredits = 0;
   for(var i = 0; i < grades.length; i++) {
     totCredits += grades[i].credits;
